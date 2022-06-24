@@ -1,6 +1,7 @@
 name: 'Cargo Semver Update'
-icon: at-sign
-color: black
+branding:
+  icon: 'at-sign'
+  color: 'black'
 description: 'Update Cargo.toml version with Semver #major #minor #patch.'
 outputs:
   new_version:
