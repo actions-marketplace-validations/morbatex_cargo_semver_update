@@ -1,4 +1,6 @@
 #!/bin/bash
+cd ${GITHUB_WORKSPACE}/${source}
+
 patch=$(git show --pretty=format:%s -s HEAD | grep -o "#patch")
 minor=$(git show --pretty=format:%s -s HEAD | grep -o "#minor")
 major=$(git show --pretty=format:%s -s HEAD | grep -o "#major")
