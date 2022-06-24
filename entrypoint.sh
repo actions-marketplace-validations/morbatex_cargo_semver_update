@@ -23,7 +23,7 @@ else
     new=$(semver -i patch $(toml get --toml-path=Cargo.toml package.version))
 fi
 echo "old version: " $old " >> new version: " $new
-toml set --toml-path=Cargo.toml version $new
+toml set --toml-path=Cargo.toml package.version $new
 
 echo "::set-output name=new_version::$new"
 echo "::set-output name=new_version_with_v::v$new"

@@ -29,7 +29,7 @@ jobs:
         
       - name: Cargo Semver Update
         id: update
-        uses: lemonxah/cargo_semver_update@v1.0.2
+        uses: lemonxah/cargo_semver_update@v1.0.3
       
       - name: Commit file
         uses: swinton/commit@v2.x
