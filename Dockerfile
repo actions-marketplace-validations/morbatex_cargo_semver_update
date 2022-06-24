@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 WORKDIR /source
-RUN apk add --update npm build-base && \
+RUN apk add --update git npm build-base && \
     npm install -g semver && \
     apk add --no-cache python3 py3-pip py-pip
 RUN /usr/bin/python3.7 -m pip install --upgrade pip
