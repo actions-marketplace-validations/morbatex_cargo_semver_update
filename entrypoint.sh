@@ -20,7 +20,7 @@ elif [ ! -z "$minor" ]; then
 elif [ ! -z "$patch" ]; then 
     new=$(semver -i patch $(toml get --toml-path=Cargo.toml package.version))
 else
-    new=$(semver -i patch $(toml get --toml-path=Cargo.toml package.version))
+    new=$(toml get --toml-path=Cargo.toml package.version)
 fi
 echo "old version: " $old " >> new version: " $new
 toml set --toml-path=Cargo.toml package.version $new
